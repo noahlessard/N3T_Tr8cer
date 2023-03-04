@@ -2,20 +2,44 @@ import subprocess
 import whois
 import requests
 from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 
 class scan_object:
 
+    iplist = []
+
+
     def scanAddressRange(self, addressRange):
-        # call subprocess here
-        
-        # don't need to return anything since this will just get saved to a file
+
+        # example command
+        # nmap -sP -oX singles/test.xml -F 69.128.137.0/24
+
+        cmd_str = "nmap -sP -oX singles/" + str(addressRange[:-3]) + ".xml " + str(addressRange) 
+        #subprocess.run(cmd_str, shell=True)
+
+        tree = ET.parse('singles/' + str(addressRange[:-3]) + '.xml')
+        root = tree.getroot()
+        for address in root.findall('.//address'):
+            self.iplist.append(str(address.get('addr')))
+
         return
 
     def scanSingleAddress(self, singleAddress):
-        # call subprocess here
 
-        # don't need to return anything since this will just get saved to a file
+        # example command 
+        # nmap -oX singles/test.xml -F 69.128.137.165
+
+        cmd_str = "nmap -oX singles/" + str(singleAddress) + ".xml -F " + str(singleAddress) 
+        subprocess.run(cmd_str, shell=True)
+
         return 
+
+    # run to clean up the singles dir
+    def cleanupSingles(self):
+        cmd_str = "rm -f singles/*"
+        subprocess.run(cmd_str, shell=True)
+
+        return
 
     def getSpamLevel(self, singleAddress):
         #https://scamalytics.com/ip/69.128.137.165
