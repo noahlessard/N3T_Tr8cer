@@ -28,7 +28,8 @@ class scan_object:
 
     def getWhoIsData(self, singleAddress):
         data = whois.whois(singleAddress)
-        return data.text
+        formattedString = "NAME: " + str(data.name) + "\n" + "ORG: " + str(data.org) + "\n" + "LOCATION: " + str(data.address) + " " + str(data.city) + " " + str(data.state) + " " + str(data.country) + "\n" + "DOMAIN: " + str(data.domain_name[0]) + "\n" + "LAST UPDATE: " + str(data.updated_date[0]) + "\n" + "EXP DATE: " + str(data.expiration_date) + "\n" + "EMAILS: " + str(data.emails[0]) + "\n" + "DNS STATUS: " + str(data.dnssec) 
+        return formattedString
         # https://pypi.org/project/python-whois/
 
     def getPortData(self, portNum):
