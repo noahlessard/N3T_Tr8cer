@@ -4,10 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 scanner = scan_object.scan_object()
-
-#scanner.scanSingleAddress("69.128.137.165")
-#scanner.cleanupSingles()
-
+scanner.cleanupSingles()
 scanner.scanAddressRange("69.128.137.0/24")
 
 hostList = []
@@ -23,11 +20,5 @@ print("\n\n\n\n")
 for x in hostList:
     print(x)
 
-#host = host_object.host_object("69.128.137.165")
-#host.readXML()
 
-#host.readSpam()
-#print(host.spamInfo)
-
-#host.readWhoIs()
 
