@@ -13,6 +13,8 @@ and you will aslo need to install nmap:
 
 When you are ready to run the webapp, run web.py and navigate to the link in the command line.
 
+If you want to use the example xml files provided, try scanning 69.128.137.0/24!
+
 Have fun!!
 
 ![alt text](https://github.com/noahlessard/N3T_Tr8cer/blob/main/static/github-splash.png)
