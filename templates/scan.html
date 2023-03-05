@@ -1,14 +1,51 @@
-
+<head>
+    <title>Scan R3sultz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scan.css') }}">
+</head>
 
 <div class="title">
     <h2>Scan Results:</h2>
 </div>
 
 
+<body>
+    <table id="data-table">
+      <tbody>
+        {% for i in range(0, form_data|length, 3) %}
+          <tr>
+            {% if form_data[i] is defined %}
+              <td>
+                <table class="spacer">
+                  <tbody>
+                    <tr><td>{{ form_data[i] }}</td></tr>
+                  </tbody>
+                </table>
+              </td>
+            {% endif %}
+            {% if form_data[i+1] is defined %}
+              <td>
+                <table class="spacer">
+                  <tbody>
+                    <tr><td>{{ form_data[i+1] }}</td></tr>
+                  </tbody>
+                </table>
+              </td>
+            {% endif %}
+            {% if form_data[i+2] is defined %}
+              <td>
+                <table class="spacer">
+                  <tbody>
+                    <tr><td>{{ form_data[i+2] }}</td></tr>
+                  </tbody>
+                </table>
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
 
-<p> {{form_data}}</p>
 
-<head>
-    <title>Scan R3sultz</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/scan.css') }}">
-</head>
+</body>
+</html>

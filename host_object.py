@@ -12,7 +12,7 @@ class host_object:
     scanner = scan_object.scan_object()
 
     def __init__(self, address, scanBoolean):
-        host_object.address = address
+        self.address = address
         if scanBoolean == True:
             self.readSingleXML()
             self.readSpam()
