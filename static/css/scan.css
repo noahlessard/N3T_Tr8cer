@@ -1,0 +1,11 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    background-image: url(/static/background1.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

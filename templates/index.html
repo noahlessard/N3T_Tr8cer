@@ -1,1 +1,41 @@
-<p>this is my flask server</p>
+
+<head>
+    <title>N3T_Tr8cer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <script type="text/javascript">
+        function loading(){
+            var content = document.getElementById("content");
+            content.style.display = "none";      
+            var loading = document.getElementById("loading");
+            loading.style.display = "block";      
+            document.body.style.backgroundImage = "url('/static/Obsidian.webp')";
+        }
+    </script>
+
+</head>
+
+
+
+
+<body>
+
+    <div id="loading">
+        <h2>Loading...</h2>
+        <img src="{{ url_for('static', filename='hacker-cat.gif') }}">
+    </div>
+
+    <div id="content">
+        <div class="title">
+            <h2>N3T_Tr8cer</h2>
+        </div>
+
+        <div class="inputs">
+            <form action="/scan" method = "POST">
+                <p> <input type = "text" name="text_input" placeholder="enter an ip range"/> </p>
+                <p> <input type = "submit" value = "ENTER" onclick="loading()" /> </p>
+            </form>
+        </div>
+    </div>
+
+</body>

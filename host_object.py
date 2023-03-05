@@ -11,11 +11,12 @@ class host_object:
 
     scanner = scan_object.scan_object()
 
-    def __init__(self, address):
+    def __init__(self, address, scanBoolean):
         host_object.address = address
-        self.readSingleXML()
-        self.readSpam()
-        self.readWhoIs()
+        if scanBoolean == True:
+            self.readSingleXML()
+            self.readSpam()
+            self.readWhoIs()
         return 
 
     # adds ports from nmap xml file to this object
