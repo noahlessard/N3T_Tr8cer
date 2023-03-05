@@ -9,10 +9,13 @@ class host_object:
     spamInfo = ""
     address = ""
     osInfo = ""
+
     scanner = scan_object.scan_object()
 
     def __init__(self, address, scanBoolean):
         self.address = address
+        self.portArray = []
+
         if scanBoolean == True:
             self.readSingleXML()
             self.readSpam()
@@ -26,6 +29,8 @@ class host_object:
         for port in root.findall('.//port'):
             port_id = port.get('portid')
             self.portInfo = self.portInfo + str(port_id) + " | "
+            self.portArray.append(str(port_id))
+
         osmatch_elems = root.findall(".//osmatch")
         if len(osmatch_elems) > 0:
             self.osInfo = osmatch_elems[0].get('name')
@@ -37,8 +42,14 @@ class host_object:
     def readWhoIs(self):
         self.whoisInfo = self.scanner.getWhoIsData(self.address)
 
+    def printPorts(self):
+        return " PORTS: " + self.portInfo + "\n" 
+
+    def getPortData(self, portNum):
+        return "https://www.speedguide.net/port.php?port=" + str(portNum)
+
     def __str__(self):
-        return "ADDR: " + self.address + "\n" + "ESTIMATED OS: " + self.osInfo + "\n" + " PORTS: " + self.portInfo + "\n" + "FRAUD LEVEL: " + self.spamInfo + "\n" + self.whoisInfo + "\n"
+        return "ADDR: " + self.address + "\n" + "ESTIMATED OS: " + self.osInfo + "\n" + "FRAUD LEVEL: " + self.spamInfo + "\n" + self.whoisInfo + "\n"
 
 
     

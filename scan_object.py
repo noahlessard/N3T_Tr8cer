@@ -58,7 +58,6 @@ class scan_object:
         return formattedString
         # https://pypi.org/project/python-whois/
 
-    def getPortData(self, portNum):
-        return "https://www.speedguide.net/port.php?port=" + str(portNum)
+
 
     # port risk and links go in displaying code / different class?

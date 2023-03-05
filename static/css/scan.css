@@ -11,7 +11,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: black;
-    background-image: url(/static/background1.jpg);
+    /* background-image: url(/static/background1.jpg); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,6 +20,7 @@ body {
 }
 
 h2{
+    display: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@ h2{
     font-family: 'Courier New';
 }
 
-td { white-space:pre }
+.table_text { white-space:pre }
 
 table{
 
@@ -91,3 +92,11 @@ table{
     transition: max-height 0.2s ease-out;
     font-size: 2vh;
   } 
+
+  .link-container a {
+    font-size: 2.7vh;
+    display: inline-block !important;
+    white-space: normal !important;
+    color: #27d804;
+
+}

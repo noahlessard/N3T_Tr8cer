@@ -1,17 +1,14 @@
 <head>
     <title>Scan R3sultz</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scan.css') }}">
+    <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
 </head>
-
-<div class="title">
-    <h2>Scan Results:</h2>
-</div>
 
 
 <body>
     <table id="data-table">
       <tbody>
-        {% for i in range(0, form_data|length, 2) %}
+        {% for i in range(0, form_data|length, 11) %}
           <tr>
             {% if form_data[i] is defined %}
               <td>
@@ -19,7 +16,11 @@
                 <div class="content">
                 <table class="spacer">
                   <tbody>
-                    <tr><td>{{ form_data[i] }}</td></tr>
+                    <tr><td> 
+                      <div class="link-container">OPEN PORTS:<br> 
+                      {% for link in form_data[i].portArray %}
+                      <a href="{{ form_data[i].getPortData(link) }}" target="_blank">{{ link }}</a>
+                      {% endfor %}</div><br><div class="table_text">{{form_data[i]}}</div></td></tr>
                   </tbody>
                 </table>
                </div> 
@@ -27,21 +28,162 @@
             {% endif %}
 
             {% if form_data[i+1] is defined %}
+            <td>
+              <button type="button" class="collapsible"> {{form_data[i+1].address}}</button>
+              <div class="content">
+              <table class="spacer">
+                <tbody>
+                  <tr><td> 
+                    <div class="link-container">OPEN PORTS:<br> 
+                    {% for link in form_data[i+1].portArray %}
+                    <a href="{{ form_data[i+1].getPortData(link) }}" target="_blank">{{ link }}</a>
+                    {% endfor %}</div><br><div class="table_text">{{form_data[i+1]}}</div></td></tr>
+                </tbody>
+              </table>
+             </div> 
+            </td>
+          {% endif %}
+
+          {% if form_data[i+2] is defined %}
+          <td>
+            <button type="button" class="collapsible"> {{form_data[i+2].address}}</button>
+            <div class="content">
+            <table class="spacer">
+              <tbody>
+                <tr><td> 
+                  <div class="link-container">OPEN PORTS:<br> 
+                  {% for link in form_data[i+2].portArray %}
+                  <a href="{{ form_data[i+2].getPortData(link) }}" target="_blank">{{ link }}</a>
+                  {% endfor %}</div><br><div class="table_text">{{form_data[i+2]}}</div></td></tr>
+              </tbody>
+            </table>
+           </div> 
+          </td>
+        {% endif %}
+
+        {% if form_data[i+3] is defined %}
+        <td>
+          <button type="button" class="collapsible"> {{form_data[i+3].address}}</button>
+          <div class="content">
+          <table class="spacer">
+            <tbody>
+              <tr><td> 
+                <div class="link-container">OPEN PORTS:<br> 
+                {% for link in form_data[i+3].portArray %}
+                <a href="{{ form_data[i+3].getPortData(link) }}" target="_blank">{{ link }}</a>
+                {% endfor %}</div><br><div class="table_text">{{form_data[i+3]}}</div></td></tr>
+            </tbody>
+          </table>
+         </div> 
+        </td>
+      {% endif %}
+
+      {% if form_data[i+4] is defined %}
+      <td>
+        <button type="button" class="collapsible"> {{form_data[i+4].address}}</button>
+        <div class="content">
+        <table class="spacer">
+          <tbody>
+            <tr><td> 
+              <div class="link-container">OPEN PORTS:<br> 
+              {% for link in form_data[i+4].portArray %}
+              <a href="{{ form_data[i+4].getPortData(link) }}" target="_blank">{{ link }}</a>
+              {% endfor %}</div><br><div class="table_text">{{form_data[i+4]}}</div></td></tr>
+          </tbody>
+        </table>
+       </div> 
+      </td>
+    {% endif %}
+
+    {% if form_data[i+5] is defined %}
+    <td>
+      <button type="button" class="collapsible"> {{form_data[i+5].address}}</button>
+      <div class="content">
+      <table class="spacer">
+        <tbody>
+          <tr><td> 
+            <div class="link-container">OPEN PORTS:<br> 
+            {% for link in form_data[i+5].portArray %}
+            <a href="{{ form_data[i+5].getPortData(link) }}" target="_blank">{{ link }}</a>
+            {% endfor %}</div><br><div class="table_text">{{form_data[i+5]}}</div></td></tr>
+        </tbody>
+      </table>
+     </div> 
+    </td>
+  {% endif %}
+
+  {% if form_data[i+6] is defined %}
+  <td>
+    <button type="button" class="collapsible"> {{form_data[i+6].address}}</button>
+    <div class="content">
+    <table class="spacer">
+      <tbody>
+        <tr><td> 
+          <div class="link-container">OPEN PORTS:<br> 
+          {% for link in form_data[i+6].portArray %}
+          <a href="{{ form_data[i+6].getPortData(link) }}" target="_blank">{{ link }}</a>
+          {% endfor %}</div><br><div class="table_text">{{form_data[i+6]}}</div></td></tr>
+      </tbody>
+    </table>
+   </div> 
+  </td>
+{% endif %}
+
+        {% if form_data[i+7] is defined %}
+          <td>
+            <button type="button" class="collapsible"> {{form_data[i+7].address}}</button>
+            <div class="content">
+            <table class="spacer">
+              <tbody>
+                <tr><td> 
+                  <div class="link-container">OPEN PORTS:<br> 
+                  {% for link in form_data[i+7].portArray %}
+                  <a href="{{ form_data[i+7].getPortData(link) }}" target="_blank">{{ link }}</a>
+                  {% endfor %}</div><br><div class="table_text">{{form_data[i+7]}}</div></td></tr>
+              </tbody>
+            </table>
+           </div> 
+          </td>
+        {% endif %}
+
+
+        {% if form_data[i+8] is defined %}
               <td>
-                <button type="button" class="collapsible"> {{form_data[i+1].address}}</button>
+                <button type="button" class="collapsible"> {{form_data[i+8].address}}</button>
                 <div class="content">
                 <table class="spacer">
                   <tbody>
-                    <tr><td>{{ form_data[i+1] }}</td></tr>
+                    <tr><td> 
+                      <div class="link-container">OPEN PORTS:<br> 
+                      {% for link in form_data[i+8].portArray %}
+                      <a href="{{ form_data[i+8].getPortData(link) }}" target="_blank">{{ link }}</a>
+                      {% endfor %}</div><br><div class="table_text">{{form_data[i+8]}}</div></td></tr>
                   </tbody>
                 </table>
                </div> 
               </td>
             {% endif %}
 
-          </tr>
 
-            
+
+            {% if form_data[i+9] is defined %}
+            <td>
+              <button type="button" class="collapsible"> {{form_data[i+9].address}}</button>
+              <div class="content">
+              <table class="spacer">
+                <tbody>
+                  <tr><td> 
+                    <div class="link-container">OPEN PORTS:<br> 
+                    {% for link in form_data[i+9].portArray %}
+                    <a href="{{ form_data[i+9].getPortData(link) }}" target="_blank">{{ link }}</a>
+                    {% endfor %}</div><br><div class="table_text">{{form_data[i+9]}}</div></td></tr>
+                </tbody>
+              </table>
+             </div> 
+            </td>
+          {% endif %}
+
+          </tr>
 
         {% endfor %}
       </tbody>
@@ -72,7 +214,15 @@
   </script>
 
   </body>
-
-
-</body>
+<script>
+  var element = document.getElementById('data-table')
+  panzoom(element, { 
+  maxZoom: 1.5,
+  minZoom: 0.2,
+  zoomDoubleClickSpeed: 1, 
+  initialZoom: 0.8,
+  initialX: window.innerWidth / 1.8,
+  initialY: window.innerHeight / 1.8
+  })
+</script>
 </html>
