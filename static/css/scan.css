@@ -1,4 +1,13 @@
+*{
+    max-width: 100vw; /* set maximum width to viewport width */
+    max-height: 100vh; /* set maximum height to viewport height */
+}
+
 body {
+    max-width: 100vw; /* set maximum width to viewport width */
+    max-height: 100vh; /* set maximum height to viewport height */
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    overflow-y: auto; /* enable vertical scrollbar when necessary */
     margin: 0px;
     padding: 0px;
     background-color: black;
@@ -31,20 +40,20 @@ table{
 }
 
 #data-table td {
-    padding-left: 3vh;
-    padding-right: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
 
 .spacer td {
     border: 2px solid #27d804;
     border-radius: 8px;
     padding-right: 20px;
-    background-color: #87b27e;
+    background-color: #4f554e;
     text-align: center;
   }
 
 #data-table td * {
     user-select: text;
     align-items: center;
-    font-size: 3vh;
+    font-size: 1.7vh;
     }

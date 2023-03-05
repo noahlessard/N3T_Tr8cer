@@ -21,19 +21,22 @@ def about():
 def data():
     if request.method == "POST":
         form_data = request.form.get('text_input')
-
-        scanner.scanAddressRange("69.128.137.0/24")
-        print(scanner.iplist)
+                                # 69.128.137.0/24
+        scanner.scanAddressRange(str(form_data))
         hostList = []
 
         index = 0
-        while index < 4:
-            scanner.scanSingleAddress(scanner.iplist[index])
+        while index < len(scanner.iplist):
+            if(os.path.exists('singles/' + str(scanner.iplist[index]) + ".xml") == False):
+                print('scanning' +  str(scanner.iplist[index]))
+                scanner.scanSingleAddress(scanner.iplist[index])
+            
             hostList.append(host_object.host_object(scanner.iplist[index], True))
+            print(index)
             index = index + 1
 
-
         return render_template("scan.html", form_data = hostList)
+
 
 if __name__ == "__main__":
     app.run()
