@@ -26,9 +26,15 @@ def data():
         form_data = request.form.get('text_input')
         print("INPUTTED ADDRESS: " + form_data)
 
-                                # 69.128.137.0/24
-        scanner.scanAddressRange(str(form_data))
+        
+        tries = 0
+        while len(scanner.iplist) == 0 or tries > 3:
+                                    # 69.128.137.0/24
+            scanner.scanAddressRange(str(form_data))
+            tries = tries + 1
+
         hostList = []
+
 
         index = 0
         while index < len(scanner.iplist):

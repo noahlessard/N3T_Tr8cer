@@ -11,21 +11,66 @@
 <body>
     <table id="data-table">
       <tbody>
-        {% for i in range(0, form_data|length, 1) %}
+        {% for i in range(0, form_data|length, 2) %}
           <tr>
             {% if form_data[i] is defined %}
               <td>
+                <button type="button" class="collapsible"> {{form_data[i].address}}</button>
+                <div class="content">
                 <table class="spacer">
                   <tbody>
                     <tr><td>{{ form_data[i] }}</td></tr>
                   </tbody>
                 </table>
+               </div> 
               </td>
             {% endif %}
+
+            {% if form_data[i+1] is defined %}
+              <td>
+                <button type="button" class="collapsible"> {{form_data[i+1].address}}</button>
+                <div class="content">
+                <table class="spacer">
+                  <tbody>
+                    <tr><td>{{ form_data[i+1] }}</td></tr>
+                  </tbody>
+                </table>
+               </div> 
+              </td>
+            {% endif %}
+
           </tr>
+
+            
+
         {% endfor %}
       </tbody>
     </table>
+
+
+    <script>
+     var coll = document.getElementsByClassName("collapsible");
+    var i;
+    var prev = null;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+    if (prev && prev !== this) {
+      prev.classList.remove("active");
+      prev.nextElementSibling.style.maxHeight = null;
+    }
+    prev = (prev === this) ? null : this;
+    });
+    }
+  </script>
+
   </body>
 
 
