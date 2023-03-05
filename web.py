@@ -30,6 +30,9 @@ def data():
             scanner.scanAddressRange(str(form_data))
             tries = tries + 1
 
+        if(scanner.iplist == 0):
+            print("Nmap failed to scan the range in 3 tries. Maybe you are being blocked?")
+
         global hostList
         hostList = []
 
@@ -51,6 +54,10 @@ def lookup():
 
         portList = []
         form_data = request.form.get('port_input')
+
+        if form_data == "" or form_data == None or form_data == " ":
+            return render_template("scan.html", form_data = hostList)
+
 
         for host in hostList:
             if str(form_data) in host.portArray:

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Mar  5 10:28:30 2023 as: nmap -Pn -O -sS -oX singles/69.128.137.168.xml -F 69.128.137.168 -->
+<nmaprun scanner="nmap" args="nmap -Pn -O -sS -oX singles/69.128.137.168.xml -F 69.128.137.168" start="1678033710" startstr="Sun Mar  5 10:28:30 2023" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1678033711" endtime="1678033717"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="69.128.137.168" addrtype="ipv4"/>
+<hostnames>
+<hostname name="shop.bendbroadband.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="93">
+<extrareasons reason="reset" count="93" proto="tcp" ports="7,9,13,21-23,25-26,37,79,81,88,106,110-111,113,119,143-144,179,199,389,427,444,465,513-514,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="244"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="244"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="515"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="printer" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="7"/>
+<portused state="closed" proto="udp" portid="32191"/>
+<osmatch name="F5 BIG-IP Edge Gateway" accuracy="92" line="25198">
+<osclass type="load balancer" vendor="F5 Networks" osfamily="embedded" accuracy="92"/>
+</osmatch>
+<osmatch name="F5 BIG-IP Local Traffic Manager load balancer (TMOS 11.6)" accuracy="87" line="25355">
+<osclass type="load balancer" vendor="F5 Networks" osfamily="TMOS" osgen="11.6.X" accuracy="87"><cpe>cpe:/o:f5:tmos:11.6</cpe></osclass>
+</osmatch>
+<osmatch name="OpenBSD 4.0" accuracy="86" line="90823">
+<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="86"><cpe>cpe:/o:openbsd:openbsd:4.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="85" line="27738">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="85"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2996472" lastboot="Sun Jan 29 18:07:25 2023"/>
+<distance value="11"/>
+<tcpsequence index="260" difficulty="Good luck!" values="C26FD09B,5B78F61,54626EED,42E23EA6,43146D85,42B3CE5D"/>
+<ipidsequence class="Randomized" values="C7FF,C807,C820,711D,C86A,5EE7"/>
+<tcptssequence class="1000HZ" values="B29A8422,B29A8441,B29A8494,B29A84FB,B29A8560,B29A85C4"/>
+<times srtt="30461" rttvar="30296" to="151645"/>
+</host>
+<runstats><finished time="1678033717" timestr="Sun Mar  5 10:28:37 2023" summary="Nmap done at Sun Mar  5 10:28:37 2023; 1 IP address (1 host up) scanned in 7.77 seconds" elapsed="7.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

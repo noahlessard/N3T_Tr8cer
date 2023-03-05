@@ -14,7 +14,7 @@ class scan_object:
         # example command
         # nmap -sP -oX singles/test.xml -F 69.128.137.0/24
 
-        cmd_str = "sudo nmap -sP -oX singles/" + str(addressRange[:-3]) + ".xml " + str(addressRange) 
+        cmd_str = "sudo nmap -sn -oX singles/" + str(addressRange[:-3]) + ".xml " + str(addressRange) 
         subprocess.run(cmd_str, shell=True)
 
         tree = ET.parse('singles/' + str(addressRange[:-3]) + '.xml')
@@ -29,7 +29,7 @@ class scan_object:
         # example command 
         # nmap -oX singles/test.xml -F 69.128.137.165
         # nmap -sV -sS -oX singles/test.xml -F 69.128.137.165
-        cmd_str = "sudo nmap -sV -O -sS -oX singles/" + str(singleAddress) + ".xml -F " + str(singleAddress) 
+        cmd_str = "sudo nmap -Pn -O -sS -oX singles/" + str(singleAddress) + ".xml -F " + str(singleAddress)
         subprocess.run(cmd_str, shell=True)
 
         return 

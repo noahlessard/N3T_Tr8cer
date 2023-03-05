@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Mar  5 10:29:28 2023 as: nmap -Pn -O -sS -oX singles/69.128.137.183.xml -F 69.128.137.183 -->
+<nmaprun scanner="nmap" args="nmap -Pn -O -sS -oX singles/69.128.137.183.xml -F 69.128.137.183" start="1678033768" startstr="Sun Mar  5 10:29:28 2023" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="100" services="7,9,13,21-23,25-26,37,53,79-81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,443-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1678033768" endtime="1678033775"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="69.128.137.183" addrtype="ipv4"/>
+<hostnames>
+<hostname name="tlp.tds.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="98">
+<extrareasons reason="no-response" count="98" proto="tcp" ports="7,9,13,21-23,25-26,37,53,79,81,88,106,110-111,113,119,135,139,143-144,179,199,389,427,444-445,465,513-515,543-544,548,554,587,631,646,873,990,993,995,1025-1029,1110,1433,1720,1723,1755,1900,2000-2001,2049,2121,2717,3000,3128,3306,3389,3986,4899,5000,5009,5051,5060,5101,5190,5357,5432,5631,5666,5800,5900,6000-6001,6646,7070,8000,8008-8009,8080-8081,8443,8888,9100,9999-10000,32768,49152-49157"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="244"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="244"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="F5 BIG-IP Edge Gateway" accuracy="92" line="25198">
+<osclass type="load balancer" vendor="F5 Networks" osfamily="embedded" accuracy="92"/>
+</osmatch>
+<osmatch name="F5 BIG-IP Local Traffic Manager load balancer (TMOS 11.6)" accuracy="90" line="25355">
+<osclass type="load balancer" vendor="F5 Networks" osfamily="TMOS" osgen="11.6.X" accuracy="90"><cpe>cpe:/o:f5:tmos:11.6</cpe></osclass>
+</osmatch>
+<osmatch name="OpenBSD 4.0" accuracy="86" line="90823">
+<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="86"><cpe>cpe:/o:openbsd:openbsd:4.0</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="4342797" lastboot="Sat Jan 14 04:09:38 2023"/>
+<tcpsequence index="256" difficulty="Good luck!" values="F1BF3756,35FBA431,6059AA22,74559CBA,7510601C,755B5920"/>
+<ipidsequence class="Randomized" values="5E5C,D540,5E70,E708,E7AF,E7C8"/>
+<tcptssequence class="other" values="B29B663C,B29B663C,B29B666C,B29B66D5,B29B673A,B29B679F"/>
+<times srtt="16511" rttvar="17729" to="100000"/>
+</host>
+<runstats><finished time="1678033775" timestr="Sun Mar  5 10:29:35 2023" summary="Nmap done at Sun Mar  5 10:29:35 2023; 1 IP address (1 host up) scanned in 8.01 seconds" elapsed="8.01" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
