@@ -6,16 +6,13 @@ import os
 
 app = Flask(__name__)
 scanner = scan_object.scan_object()
+hostList = []
 
 #landing page
 @app.route('/')
 def hello():
     return render_template("index.html")
   
-#this will be where the app will route when the HQ images is actually needed
-@app.route('/hd/')
-def about():
-    return render_template("")
 
 @app.route('/scan', methods = ['POST', 'GET']) 
 def data():
@@ -33,6 +30,7 @@ def data():
             scanner.scanAddressRange(str(form_data))
             tries = tries + 1
 
+        global hostList
         hostList = []
 
 
@@ -46,6 +44,19 @@ def data():
             index = index + 1
 
         return render_template("scan.html", form_data = hostList)
+
+@app.route('/specific', methods = ['POST', 'GET']) 
+def lookup():
+    if request.method == "POST":
+
+        portList = []
+        form_data = request.form.get('port_input')
+
+        for host in hostList:
+            if str(form_data) in host.portArray:
+                portList.append(host)
+
+        return render_template("scan.html", form_data = portList)
 
 
 if __name__ == "__main__":

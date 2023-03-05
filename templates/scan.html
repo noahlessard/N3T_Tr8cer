@@ -4,6 +4,14 @@
     <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
 </head>
 
+<div class="navbar">
+  <div class="inputs">
+    <form action="/specific" method = "POST">
+        <p><input type = "text" name="port_input" placeholder="enter an port"/>
+        <input type = "submit" value = "ENTER" /> </p>
+    </form>
+</div>
+</div>
 
 <body>
     <table id="data-table">
@@ -220,9 +228,9 @@
   maxZoom: 1.5,
   minZoom: 0.2,
   zoomDoubleClickSpeed: 1, 
-  initialZoom: 0.8,
-  initialX: window.innerWidth / 1.8,
-  initialY: window.innerHeight / 1.8
+  initialZoom: 0.6,
+  initialX: 10,
+  initialY: window.innerHeight / 2.5
   })
 </script>
 </html>
