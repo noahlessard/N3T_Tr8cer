@@ -14,3 +14,5 @@ and you will aslo need to install nmap:
 When you are ready to run the webapp, run web.py and navigate to the link in the command line.
 
 Have fun!!
+
+![alt text](https://github.com/noahlessard/N3T_Tr8cer/blob/main/static/github-splash.png)
