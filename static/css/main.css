@@ -54,8 +54,30 @@ div#loading {
     cursor: wait;
     }
 
+div#loading h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+    color: #27d804;
+    font-size: 8vw;
+    font-family: 'Courier New';
+    margin-bottom: 0;
+    }
+
 div#loading img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     }
+
+div#loading p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    margin-top: 1vh;
+    color: #27d804;
+    font-size: 2vw;
+    font-family: 'Courier New';
+}

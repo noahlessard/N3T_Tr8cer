@@ -20,7 +20,12 @@ def about():
 @app.route('/scan', methods = ['POST', 'GET']) 
 def data():
     if request.method == "POST":
+
+        scanner.iplist = []
+
         form_data = request.form.get('text_input')
+        print("INPUTTED ADDRESS: " + form_data)
+
                                 # 69.128.137.0/24
         scanner.scanAddressRange(str(form_data))
         hostList = []
@@ -32,7 +37,6 @@ def data():
                 scanner.scanSingleAddress(scanner.iplist[index])
             
             hostList.append(host_object.host_object(scanner.iplist[index], True))
-            print(index)
             index = index + 1
 
         return render_template("scan.html", form_data = hostList)

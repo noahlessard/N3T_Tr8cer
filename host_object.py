@@ -8,7 +8,7 @@ class host_object:
     portInfo = "| "
     spamInfo = ""
     address = ""
-
+    osInfo = ""
     scanner = scan_object.scan_object()
 
     def __init__(self, address, scanBoolean):
@@ -26,6 +26,9 @@ class host_object:
         for port in root.findall('.//port'):
             port_id = port.get('portid')
             self.portInfo = self.portInfo + str(port_id) + " | "
+        osmatch_elems = root.findall(".//osmatch")
+        if len(osmatch_elems) > 0:
+            self.osInfo = osmatch_elems[0].get('name')
 
     # adds the spam level to this object
     def readSpam(self):
@@ -35,7 +38,7 @@ class host_object:
         self.whoisInfo = self.scanner.getWhoIsData(self.address)
 
     def __str__(self):
-        return "ADDR: " + self.address + "\n" + "PORTS: " + self.portInfo + "\n" + "FRAUD LEVEL: " + self.spamInfo + "\n" + self.whoisInfo + "\n"
+        return "ADDR: " + self.address + "\n" + "ESTIMATED OS: " + self.osInfo + "\n" + " PORTS: " + self.portInfo + "\n" + "FRAUD LEVEL: " + self.spamInfo + "\n" + self.whoisInfo + "\n"
 
 
     
