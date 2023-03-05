@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.92 scan initiated Sun Mar  5 10:32:38 2023 as: nmap -sn -oX singles/69.128.137.0.xml 69.128.137.0/24 -->
-<nmaprun scanner="nmap" args="nmap -sn -oX singles/69.128.137.0.xml 69.128.137.0/24" start="1678033958" startstr="Sun Mar  5 10:32:38 2023" version="7.92" xmloutputversion="1.05">
+<!-- Nmap 7.92 scan initiated Sun Mar  5 10:39:44 2023 as: nmap -sn -oX singles/69.128.137.0.xml 69.128.137.0/24 -->
+<nmaprun scanner="nmap" args="nmap -sn -oX singles/69.128.137.0.xml 69.128.137.0/24" start="1678034384" startstr="Sun Mar  5 10:39:44 2023" version="7.92" xmloutputversion="1.05">
 <verbose level="0"/>
 <debugging level="0"/>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
@@ -10,190 +10,190 @@
 <hostnames>
 <hostname name="ftbgwiieagg71-v2410-secondary12.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="27168" rttvar="27168" to="135840"/>
+<times srtt="12038" rttvar="12038" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.2" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg71-v2410.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="24220" rttvar="24220" to="121100"/>
+<times srtt="10251" rttvar="10251" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.3" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg72-v2410.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="24184" rttvar="24184" to="120920"/>
+<times srtt="10220" rttvar="10220" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.33" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg71-v2458-secondary1.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="27380" rttvar="27380" to="136900"/>
+<times srtt="133777" rttvar="133777" to="668885"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.34" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg71-v2458.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="27356" rttvar="27356" to="136780"/>
+<times srtt="133703" rttvar="133703" to="668515"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.35" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg72-v2458.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="27340" rttvar="27340" to="136700"/>
+<times srtt="121795" rttvar="123740" to="616755"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.162" addrtype="ipv4"/>
 <hostnames>
 <hostname name="login.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="6952" rttvar="6952" to="100000"/>
+<times srtt="88051" rttvar="88051" to="440255"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.164" addrtype="ipv4"/>
 <hostnames>
 <hostname name="bendbroadband.com" type="PTR"/>
 </hostnames>
-<times srtt="13018" rttvar="13018" to="100000"/>
+<times srtt="87888" rttvar="87888" to="439440"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.165" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tdstelecom.com" type="PTR"/>
 </hostnames>
-<times srtt="6924" rttvar="6924" to="100000"/>
+<times srtt="87851" rttvar="87851" to="439255"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.166" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tdsbusiness.com" type="PTR"/>
 </hostnames>
-<times srtt="6906" rttvar="6906" to="100000"/>
+<times srtt="87814" rttvar="87814" to="439070"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.167" addrtype="ipv4"/>
 <hostnames>
 <hostname name="support.tdsmanagedip.com" type="PTR"/>
 </hostnames>
-<times srtt="6888" rttvar="6888" to="100000"/>
+<times srtt="87778" rttvar="87778" to="438890"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.168" addrtype="ipv4"/>
 <hostnames>
 <hostname name="shop.bendbroadband.com" type="PTR"/>
 </hostnames>
-<times srtt="6870" rttvar="6870" to="100000"/>
+<times srtt="10413" rttvar="10413" to="100000"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.169" addrtype="ipv4"/>
 <hostnames>
 <hostname name="shop.hellotds.com" type="PTR"/>
 </hostnames>
-<times srtt="6852" rttvar="6852" to="100000"/>
+<times srtt="10384" rttvar="10384" to="100000"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.170" addrtype="ipv4"/>
 <hostnames>
 <hostname name="hellotds.com" type="PTR"/>
 </hostnames>
-<times srtt="6833" rttvar="6833" to="100000"/>
+<times srtt="87744" rttvar="87744" to="438720"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.171" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tdsfiber.com" type="PTR"/>
 </hostnames>
-<times srtt="6814" rttvar="6814" to="100000"/>
+<times srtt="87707" rttvar="87707" to="438535"/>
 </host>
 <host><status state="up" reason="reset" reason_ttl="244"/>
 <address addr="69.128.137.172" addrtype="ipv4"/>
 <hostnames>
 <hostname name="vanity" type="PTR"/>
 </hostnames>
-<times srtt="6797" rttvar="6797" to="100000"/>
+<times srtt="87674" rttvar="87674" to="438370"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.181" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tdsvoip.com" type="PTR"/>
 </hostnames>
-<times srtt="6632" rttvar="6632" to="100000"/>
+<times srtt="10041" rttvar="10041" to="100000"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.182" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tds-epay.com" type="PTR"/>
 </hostnames>
-<times srtt="6613" rttvar="6613" to="100000"/>
+<times srtt="55578" rttvar="55578" to="277890"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.183" addrtype="ipv4"/>
 <hostnames>
 <hostname name="tlp.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="6594" rttvar="6594" to="100000"/>
+<times srtt="55368" rttvar="55368" to="276840"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.185" addrtype="ipv4"/>
 <hostnames>
 <hostname name="hackeralert.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="8667" rttvar="8667" to="100000"/>
+<times srtt="55185" rttvar="55185" to="275925"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.187" addrtype="ipv4"/>
 <hostnames>
 <hostname name="address.tdsfiber.com" type="PTR"/>
 </hostnames>
-<times srtt="12583" rttvar="12583" to="100000"/>
+<times srtt="9934" rttvar="9934" to="100000"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.188" addrtype="ipv4"/>
 <hostnames>
 <hostname name="mytdsbusiness.com" type="PTR"/>
 </hostnames>
-<times srtt="12542" rttvar="12542" to="100000"/>
+<times srtt="9901" rttvar="9901" to="100000"/>
 </host>
 <host><status state="up" reason="syn-ack" reason_ttl="244"/>
 <address addr="69.128.137.189" addrtype="ipv4"/>
 <hostnames>
 <hostname name="account.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="12503" rttvar="12503" to="100000"/>
+<times srtt="9868" rttvar="9868" to="100000"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.225" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg71-v2407.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="17824" rttvar="17824" to="100000"/>
+<times srtt="63298" rttvar="63298" to="316490"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.226" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg71-v2407-secondary2.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="20152" rttvar="20152" to="100760"/>
+<times srtt="63276" rttvar="63276" to="316380"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="247"/>
 <address addr="69.128.137.227" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiieagg72-v2407.network.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="17786" rttvar="17786" to="100000"/>
+<times srtt="63255" rttvar="63255" to="316275"/>
 </host>
 <host><status state="up" reason="echo-reply" reason_ttl="55"/>
 <address addr="69.128.137.228" addrtype="ipv4"/>
 <hostnames>
 <hostname name="ftbgwiiesecutils202.svc.tds.net" type="PTR"/>
 </hostnames>
-<times srtt="18680" rttvar="15161" to="100000"/>
+<times srtt="60319" rttvar="53226" to="273223"/>
 </host>
-<runstats><finished time="1678033962" timestr="Sun Mar  5 10:32:42 2023" summary="Nmap done at Sun Mar  5 10:32:42 2023; 256 IP addresses (27 hosts up) scanned in 4.02 seconds" elapsed="4.02" exit="success"/><hosts up="27" down="229" total="256"/>
+<runstats><finished time="1678034390" timestr="Sun Mar  5 10:39:50 2023" summary="Nmap done at Sun Mar  5 10:39:50 2023; 256 IP addresses (27 hosts up) scanned in 5.85 seconds" elapsed="5.85" exit="success"/><hosts up="27" down="229" total="256"/>
 </runstats>
 </nmaprun>
