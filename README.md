@@ -1,5 +1,5 @@
 # N3T_Tr8cer
-An ascii styled network scanner, for madhacks 2023!
+An ascii styled network scanner, for madhacks 2023! Watch a demo @ https://www.youtube.com/watch?v=i7NQ2Gj9qUY.
 
 It works with nmap and python flask, and scans for open ports, registration data, and spam/fraud detection all in one place! 
 It also supports searching by open ports, and if you click on the port, it will take you to a list of security vulnerabilites that might be present on that port.
